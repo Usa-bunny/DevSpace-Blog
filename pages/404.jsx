@@ -18,7 +18,12 @@ export default function NotFoundPage() {
           This page does not exist
         </h2>
 
-        <Link href={"/"}>{"<"} Home</Link>
+        <Link
+          href={"/"}
+          className="relative block py-2 px-3 rounded-l leading-tight bg-white border border-gray-300 text-gray-900 mr-1 hover:bg-gray-800 hover:text-white cursor-pointer"
+        >
+          Home
+        </Link>
       </div>
     </Layout>
   );

@@ -33,9 +33,9 @@ export default function Post({ post }) {
       <div className="flex justify-between items-center mt-6">
         <Link
           href={`/blog/${post.slug}`}
-          className="text-gray-900 hover:text-blue-600"
+          className="relative block py-2 px-3 rounded-l leading-tight bg-white border border-gray-300 text-gray-900 mr-1 hover:bg-gray-800 hover:text-white cursor-pointer"
         >
-          Read More
+          Read More 
         </Link>
         <div className="flex items-center">
           <img

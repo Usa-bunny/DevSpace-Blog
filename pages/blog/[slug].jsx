@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { marked  } from "marked";
+import { marked } from "marked";
 import Link from "next/link";
 import Layout from "@/components/Layout";
 import CategoryLabel from "@/components/CategoryLabel";
@@ -15,7 +15,12 @@ export default function PostPage({
 
   return (
     <Layout title={title}>
-      <Link href={"/blog"}>{"<"} Go Back</Link>
+      <Link
+        href={"/blog"}
+        className="relative py-2 px-3 rounded-l leading-tight bg-white border border-gray-300 text-gray-900 mr-1 hover:bg-gray-800 hover:text-white cursor-pointer"
+      >
+        Go Back
+      </Link>
       <div className="w-full px-10 py-6 bg-white rounded-lg shadow-md mt-6">
         <div className="flex justify-between items-center mt-4">
           <h1 className="text-5xl mb-7">{title}</h1>
@@ -38,7 +43,9 @@ export default function PostPage({
           <div className="mr-4">{date}</div>
         </div>
         <div className="blog-text mt-2">
-            <div dangerouslySetInnerHTML={{__html: marked.parse(content)}}></div>
+          <div
+            dangerouslySetInnerHTML={{ __html: marked.parse(content) }}
+          ></div>
         </div>
       </div>
     </Layout>
