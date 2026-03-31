@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Header from "./Header";
+import Search from "./Search";
 
 export default function Layout({
   title = "Welcome to DevSpace",
@@ -19,6 +20,7 @@ export default function Layout({
       </Head>
 
       <Header />
+      <Search />
       <main className="container mx-auto my-7">{children}</main>
     </div>
   );
